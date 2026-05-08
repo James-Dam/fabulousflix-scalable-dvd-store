@@ -1,37 +1,50 @@
+# Fabflix — Scalable Java/MySQL DVD E-Commerce Platform
 
-<li>Project 1: https://www.youtube.com/watch?v=vZTTsqC6jso&t=19s&ab_channel=ColinHarrison </li>
-<li>Project 2: https://www.youtube.com/watch?v=e4ULRRYqZZ4&t=2s</li>
-<li>Project 3: https://www.youtube.com/watch?v=qYTMTcwylLU&ab_channel=ColinHarrison</li>
-<li>Project 4: https://youtu.be/ftSkSJjwR7s</li>
-<li>Project 5: https://youtu.be/ftSkSJjwR7s</li>
+Fabflix is a database-backed DVD e-commerce platform built as part of a UC Irvine database systems course. The project focuses on backend development, relational database design, search, authentication/security, performance optimization, and scalable deployment.
 
-<h2>Project 2 substring implementation</h2>
-<p>Used %search% format for all string searches, finding all entries containing string search substring</p>
-<p>Used browse_letter% format for all browsing by letter, finding all entries starting with browse letter</p>
+## Technical Highlights
 
-<h2>Project 3 Prepared Statement files</h2>
-<p>InsertMovieServlet.java</p>
-<p>InsertStarServlet.java</p>
-<p>AddToCartServlet.java</p>
-<p>EmployeeLoginServlet.java</p>
-<p>LoginServlet.java</p>
-<p>MovieListServlet.java</p>
-<p>MovieServlet.java</p>
-<p>PaymentConfirmationServlet.java</p>
-<p>PaymentServlet.java</p>
-<p>StarServlet.java</p>
+- Built a Java/Tomcat backend with MySQL for a movie e-commerce platform
+- Implemented full-text search, fuzzy matching, autocomplete, browsing, pagination, and cart/session functionality
+- Improved backend performance using JDBC connection pooling and MySQL master-slave replication
+- Routed read queries across master/slave databases while sending writes to the master database
+- Containerized the application using Docker and deployed a multi-service architecture with Kubernetes
+- Added HTTPS support, reCAPTCHA, prepared statements, and SQL injection prevention
 
-<h2>Project 4 Connection Pooling </h2>
-<p>Configuration path: WebContent/META-INF/context.xml</p>
-<p>Connection pooling used in all servlets with prepared statements, files stated above</p>
-<p>Instead of creating a new connection for every query, we use a set of pre-established connections, our connection pool. Each servlet grabs a connection from the pool when they need it, and return it back to the pool when done instead of closing it</p>
-<p>With two backend sql instances, we create two seperate connection pools, as defined in our context.xml, one for each backend db. When servlets grab a connection they grab from either of the connection pools depending on their needs</p>
+## Tech Stack
 
-<h2>Project 4 Master-Slave </h2>
-<p>Configuration path: WebContent/META-INF/context.xml</p>
-<p>Code for determing route is in all servlets with prepared statements, files stated above</p>
-<p>All queries that write to the database in any way are routed to the master instance. If the query is just reading from db, the query is randomly routed to either the slave or master</p>
+Java, MySQL, Apache Tomcat, JDBC, JavaScript, HTML/CSS, Docker, Kubernetes, AWS
 
-<h2>Project 5 Endpoints</h2>
-<p>Served by fabflix-login: /api/login, /api/employee_login</p>
-<p>Served by fabflix-movie: everything else</p>
+## Architecture
+
+Client → Load Balancer → Tomcat Services → JDBC Connection Pool → MySQL Master/Slave
+
+## My Contributions
+
+- Set up JDBC/MySQL connectivity and implemented database-backed servlet logic
+- Built login, payment, pagination, filtering, and session persistence features
+- Added HTTPS support, reCAPTCHA, and employee dashboard functionality
+- Created stored procedure support for movie insertion
+- Implemented full-text search and autocomplete for movie title search
+- Helped set up Docker, Kubernetes pods, and the multi-service architecture
+
+## Demo Videos
+
+- Project 1: Core movie browsing
+- Project 2: Search, cart, checkout, and sessions
+- Project 3: XML parsing, dashboard, and security
+- Project 4: Connection pooling, replication, and load balancing
+- Project 5: Docker/Kubernetes multi-service deployment
+
+## Documentation
+
+- [Course Milestones](docs/course-milestones.md)
+- [XML Parser Report](docs/xml-parser-report.md)
+- [Scalability and Deployment](docs/scalability-and-deployment.md)
+- [Security and Database Notes](docs/security-and-database-notes.md)
+- [API Endpoints](docs/api-endpoints.md)
+- [Contributions](docs/contributions.md)
+
+## Course Context
+
+This was a team project for a UC Irvine database systems course. Some deployment files reference course-specific or cloud-specific environments.
