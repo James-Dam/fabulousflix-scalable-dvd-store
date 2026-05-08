@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Movie</title>
+    <link rel="stylesheet" href="add_movie.css">
+</head>
+<body>
+    <h1>Add Movie</h1>
+
+    <div class="container">
+        <form id="insert_movie">
+            <label for="title">
+                Title:
+                <input type="text" id="title" name="title" placeholder="Enter Movie Title">
+            </label><br><br>
+
+            <label for="year">
+                Year:
+                <input type="text" id="year" name="year" placeholder="Enter Movie Year">
+            </label><br><br>
+
+            <label for="director">
+                Director:
+                <input type="text" id="director" name="director" placeholder="Enter Director">
+            </label><br><br>
+
+            <label for="star">
+                Star:
+                <input type="text" id="star" name="star" placeholder="Enter Star">
+            </label><br><br>
+
+            <label for="bYear">
+                Star Birth Year:
+                <input type="text" id="bYear" name="bYear" placeholder="Enter Star Birth year (Optional)">
+            </label><br><br>
+
+            <label for="genre">
+                Genre:
+                <input type="text" id="genre" name="genre" placeholder="Enter Genre">
+            </label><br><br>
+
+            <h5 id="status"></h5>
+
+            <button type="submit">Insert Movie</button>
+        </form>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="add_movie.js"></script>
+</body>
+</html>

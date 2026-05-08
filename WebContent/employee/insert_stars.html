@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Stars</title>
+    <link rel="stylesheet" href="insert_stars.css">
+</head>
+<body>
+    <h1>Insert New Star</h1>
+
+    <div>
+        <h3 id="show_star_id"></h3>
+    </div>
+
+    <div class="container">
+        <form id="insert_stars">
+            <label for="name">
+                Name:
+                <input type="text" id="name" name="name" placeholder="Enter Star Name">
+            </label><br><br>
+
+            <label for="year">
+                Year:
+                <input type="text" id="year" name="year" placeholder="Enter birth year (Optional)">
+            </label><br><br>
+
+            <button type="submit">Insert Star</button>
+        </form>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="insert_stars.js"></script>
+</body>
+</html>
