@@ -1,0 +1,134 @@
+body {
+    background: white;
+}
+
+#movies {
+    color: black;
+}
+
+#movies_list_body {
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px #009879;
+    background-color: white;
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #009879;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+button:not(:disabled):hover {
+    background-color: #007961;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    background-color: #f9f9f9;
+    color: #333;
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    background-color: #009879;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    flex-basis: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #007961;
+}
+

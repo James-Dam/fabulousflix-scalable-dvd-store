@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Movie</title>
+    <!-- include jquery autocomplete JS  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+    <link rel="stylesheet" href="./search-movies.css">
+</head>
+<body>
+    <h1>Search for Movies</h1>
+    <div class="container">
+        <form id="movie_search">
+            <label for="title">
+                Title:
+                <input type="text" id="title" placeholder="Enter movie title">
+            </label><br><br>
+
+            <label for="year">
+                Year:
+                <input type="text" id="year" placeholder="Enter release year">
+            </label><br><br>
+
+            <label for="director">
+                Director:
+                <input type="text" id="director" placeholder="Enter director's name">
+            </label><br><br>
+
+            <label for="star">
+                Star Name:
+                <input type="text" id="star" placeholder="Enter star's name">
+            </label><br><br>
+
+            <div class="container">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="button-container">
+        <button onclick="window.location.href='shopping-cart.html'">Checkout</button>
+    </div>
+
+    <script src="search-movies.js"></script>
+</body>
+</html>

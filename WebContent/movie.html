@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="<KEY>" crossorigin="anonymous">
+    <link rel="stylesheet" href="movie_styles.css">
+    <title>Movie</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="movie_title"></h1>
+
+        <table id="movies_table" class="content-table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th>Genres</th>
+                <th>Stars</th>
+                <th>Rating</th>
+                <th>Cart</th>
+            </tr>
+            </thead>
+            <tbody id="movie_body"></tbody>
+        </table>
+
+        <div class="back-button-container">
+            <button onclick="goBackToMovies()" class="back-button">Go Back to Movie List</button>
+            <button onclick="window.location.href='shopping-cart.html'">Checkout</button>
+            <button onclick="window.location.href='main.html'" class = "back-button">Go Back to Main Page</button>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="movie.js"></script>
+</body>
+
+</html>

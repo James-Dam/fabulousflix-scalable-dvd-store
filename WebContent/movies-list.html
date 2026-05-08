@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="<KEY>" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Movie-List</title>
+</head>
+
+<body>
+    <div id="movies">
+        <h1>Movie List</h1>
+
+        <h3 id="movies_list"></h3>
+
+        <h2 id="shopping_cart_page">
+            <button onclick="window.location.href='shopping-cart.html'">Checkout</button>
+            <button onclick="window.location.href='main.html'" >Go Back to Main Page</button>
+        </h2>
+
+        <form id="display_results">
+            <label for="results">Select Number of Movies Per Page</label>
+            <select name="results" id="results">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <input type="submit" value="submit">
+        </form>
+
+        <form id="order_results">
+            <label for="order">Order Results</label>
+            <select name="order" id="order">
+                <option value="ASC">Asc</option>
+                <option value="DESC">Desc</option>
+            </select>
+
+            <label for="first_selection"></label>
+            <select name="first_selection" id="first_selection">
+                <option value="title">Title</option>
+                <option value="rating">Rating</option>
+            </select>
+
+            <label for="order2"></label>
+            <select name="order2" id="order2">
+                <option value="ASC">Asc</option>
+                <option value="DESC">Desc</option>
+            </select>
+
+            <label for="second_selection"></label>
+            <select name="second_selection" id="second_selection">
+                <option value="rating">Rating</option>
+                <option value="title">Title</option>
+            </select>
+
+            <input type="submit" value="submit">
+        </form>
+
+        <table id=movies_table class="content-table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th>Genres</th>
+                <th>Stars</th>
+                <th>Rating</th>
+                <th>Cart</th>
+            </tr>
+            </thead>
+            <tbody id="movies_list_body"></tbody>
+        </table>
+    </div>
+
+    <!--  Pagination Form  -->
+    <footer>
+        <form id="pagination_form">
+            <button type="button" id="prev_page" value="prev">Prev</button>
+            <button type="button" id="next_page" value="next">Next</button>
+        </form>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="movie-list.js"></script>
+</body>
+
+</html>
